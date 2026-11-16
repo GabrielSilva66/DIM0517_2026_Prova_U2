@@ -1,10 +1,11 @@
-name: Python
+x'name: Python 3
 
 
 on:
   pull_request:
-    branche:
-     - develop
+    types: [merged]
+    branches:
+      - develop
 
 jobs:
   build:

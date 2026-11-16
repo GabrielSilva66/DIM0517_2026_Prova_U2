@@ -1,9 +1,10 @@
-name: Python
+name: Python 2
 
 
 on:
   pull_request:
-    branche:
+    types: [merged]
+    branches:
       - develop
 
 
