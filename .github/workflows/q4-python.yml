@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: docker
         run: |
-          docker build -t projeto:1.0 python/
+          docker build -t projeto:1.0 /python
           docker run -d -p 8080:8080 --name projeto-py projeto:1.0 
 
 
