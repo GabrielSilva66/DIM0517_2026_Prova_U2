@@ -3,12 +3,13 @@ name: Python 3
 
 on:
   pull_request:
-    types: [merged]
+    types: [closed]
     branches:
       - develop
 
 jobs:
   build:
+    if: github.event.pull_request == true
     runs-on: ubuntu-latest
     permissions:
       contents: write
