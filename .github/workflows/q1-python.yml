@@ -3,7 +3,7 @@ name: Python
 on:
   push:
     branches:
-      - 'feature/**'
+      - 'feature/**' 
     paths: 
       - 'src/**'
       - 'Dockerfile'
