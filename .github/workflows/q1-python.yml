@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - feature/*
-  paths: 
-     - 'src/*'
-     - 'Dockerfile'
-     - 'requirements.txt'
-     - 'requirements-dev.txt'
+    paths: 
+      - 'src/*'
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - 'requirements-dev.txt'
 
 jobs:
   build:
