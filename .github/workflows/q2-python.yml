@@ -1,16 +1,14 @@
 name: Python 2
 
-
 on:
   pull_request:
     types: [closed]
     branches:
       - develop
 
-
 jobs:
   build:
-    if: github.event.pull_request == true
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,5 +23,6 @@ jobs:
       - name: Check
         run: python -m py_compile src/main.py
 
-      - name: teste
+      - name: Test
         run: pytest -v
+

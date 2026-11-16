@@ -3,12 +3,14 @@ name: Python
 on:
   push:
     branches:
-      - feature/*
+      - 'feature/**'
     paths: 
-      - 'src/*'
+      - 'src/**'
       - 'Dockerfile'
+      - '.dockerignore'
       - 'requirements.txt'
       - 'requirements-dev.txt'
+      - 'pytest.ini'
 
 jobs:
   build:
@@ -25,3 +27,4 @@ jobs:
 
       - name: Check
         run: python -m py_compile src/main.py
+
